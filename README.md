@@ -192,3 +192,6 @@ docker compose down
   - 升级、回滚和版本固定建议
 - `faq/troubleshooting.md`
   - 常见启动和激活问题
+
+
+如果喜欢麻烦点个star 嘿嘿

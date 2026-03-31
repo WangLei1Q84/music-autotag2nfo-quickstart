@@ -2,10 +2,12 @@
 
 这份目录用于存放用户手册配图。
 
-当前两张图片都是示意图，不是从真实运行中的容器界面直接抓取的实拍图。
+当前图片来自 `stuart1q84/music-autotag2nfo:latest` 的实际运行界面。
 
-当前手册默认引用这两张图：
+当前目录中的页面包括：
 - `app-home.png`
+- `sources-page.png`
+- `source-create-drawer.png`
 - `license-page.png`
 
 建议后续统一按这个规则维护：

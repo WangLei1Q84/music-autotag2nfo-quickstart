@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>控制台首页示意图</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --panel: #fffdf8;
+      --ink: #1f2933;
+      --muted: #6b7280;
+      --line: #d6d0c4;
+      --accent: #2d6a4f;
+      --soft: #e8f3ed;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      background:
+        radial-gradient(circle at top left, #fffaf0 0, transparent 32%),
+        linear-gradient(135deg, #efe8db, #f7f4ed 55%, #ebe4d8);
+      color: var(--ink);
+    }
+    .shell {
+      width: 1360px;
+      height: 900px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+    .window {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      height: 100%;
+      background: rgba(255, 253, 248, 0.9);
+      border: 1px solid rgba(160, 146, 122, 0.25);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(76, 61, 45, 0.14);
+      backdrop-filter: blur(8px);
+    }
+    aside {
+      padding: 28px 22px;
+      background: linear-gradient(180deg, #f7f1e7, #f1e8d8);
+      border-right: 1px solid var(--line);
+    }
+    .brand {
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .brand small {
+      display: block;
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .nav {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .nav div {
+      padding: 12px 14px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      color: #334155;
+      background: rgba(255,255,255,0.42);
+    }
+    .nav .active {
+      border-color: rgba(45, 106, 79, 0.25);
+      background: var(--soft);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    main {
+      padding: 28px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .title {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #edf7f1;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .hint {
+      padding: 10px 14px;
+      border: 1px dashed rgba(45, 106, 79, 0.35);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.7);
+      color: #35544a;
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .card {
+      padding: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(114, 97, 75, 0.06);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .value {
+      font-size: 30px;
+      font-weight: 800;
+    }
+    .panel {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 16px;
+    }
+    .table-row {
+      display: grid;
+      grid-template-columns: 1.6fr 0.7fr 0.8fr;
+      gap: 12px;
+      padding: 12px 0;
+      border-top: 1px solid #eee7dc;
+      font-size: 14px;
+      align-items: center;
+    }
+    .table-row:first-of-type { border-top: 0; }
+    .pill {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #edf7f1;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="window">
+      <aside>
+        <div class="brand">
+          music-autotag2nfo
+          <small>控制台首页示意图</small>
+        </div>
+        <div class="nav">
+          <div class="active">总览</div>
+          <div>媒体库</div>
+          <div>自动化任务</div>
+          <div>增强能力</div>
+          <div>自动化设置</div>
+          <div>授权管理</div>
+        </div>
+      </aside>
+      <main>
+        <div class="topbar">
+          <div>
+            <div class="title">服务已经跑起来了</div>
+            <div class="badge">示意图，仅用于手册说明</div>
+          </div>
+          <div class="hint">首次部署先确认健康检查、控制台访问和输出目录都正常。</div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>服务状态</h3>
+            <div class="value">正常</div>
+          </div>
+          <div class="card">
+            <h3>镜像版本</h3>
+            <div class="value">v0.1.0</div>
+          </div>
+          <div class="card">
+            <h3>授权状态</h3>
+            <div class="value">普通版</div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="card">
+            <h3>最近任务</h3>
+            <div class="table-row">
+              <strong>扫描目录 /data/input</strong>
+              <span class="pill">完成</span>
+              <span>3 分钟前</span>
+            </div>
+            <div class="table-row">
+              <strong>输出 nfo 到 /data/output</strong>
+              <span class="pill">完成</span>
+              <span>8 分钟前</span>
+            </div>
+            <div class="table-row">
+              <strong>健康检查 /api/healthz</strong>
+              <span class="pill">正常</span>
+              <span>刚刚</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>下一步建议</h3>
+            <div class="note">
+              1. 先确认控制台可以打开。<br>
+              2. 再确认数据目录正常写入。<br>
+              3. 如果准备启用增强版，再去“授权管理”填写绑定参数并录入 license。
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>授权管理页示意图</title>
+  <style>
+    :root {
+      --bg: #f6f0e5;
+      --panel: #fffdf8;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #d9cfbf;
+      --accent: #9a3412;
+      --good: #166534;
+      --soft: #fff3e8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      background:
+        radial-gradient(circle at top right, #fff8ef 0, transparent 28%),
+        linear-gradient(135deg, #efe4d3, #f8f4ed 52%, #ece1d0);
+      color: var(--ink);
+    }
+    .shell {
+      width: 1360px;
+      height: 900px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+    .window {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      height: 100%;
+      background: rgba(255, 253, 248, 0.92);
+      border: 1px solid rgba(155, 122, 84, 0.24);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(76, 61, 45, 0.14);
+      backdrop-filter: blur(8px);
+    }
+    aside {
+      padding: 28px 22px;
+      background: linear-gradient(180deg, #f7efe3, #f2e5d3);
+      border-right: 1px solid var(--line);
+    }
+    .nav {
+      display: grid;
+      gap: 10px;
+      margin-top: 42px;
+    }
+    .nav div {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.46);
+    }
+    .nav .active {
+      background: #fff1e6;
+      color: var(--accent);
+      font-weight: 700;
+      border: 1px solid rgba(154, 52, 18, 0.18);
+    }
+    main { padding: 28px; }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -0.03em;
+    }
+    .sub {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .tag {
+      padding: 8px 12px;
+      background: #fff2e8;
+      border: 1px solid rgba(154, 52, 18, 0.18);
+      border-radius: 999px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+    }
+    .card {
+      padding: 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(114, 97, 75, 0.06);
+    }
+    .label {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .input, .textarea {
+      width: 100%;
+      border: 1px solid #dccfbc;
+      border-radius: 14px;
+      background: #fffcf6;
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+    .textarea {
+      min-height: 220px;
+      line-height: 1.5;
+      resize: none;
+    }
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .btn {
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .primary {
+      background: #9a3412;
+      color: white;
+    }
+    .secondary {
+      background: #f4eadc;
+      color: #7c2d12;
+    }
+    .state {
+      display: grid;
+      gap: 14px;
+    }
+    .ok {
+      padding: 16px;
+      border-radius: 16px;
+      background: #effbf2;
+      border: 1px solid rgba(22, 101, 52, 0.15);
+      color: var(--good);
+    }
+    .warn {
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--soft);
+      border: 1px dashed rgba(154, 52, 18, 0.22);
+      color: #7c2d12;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="window">
+      <aside>
+        <div style="font-size:24px;font-weight:700;">music-autotag2nfo</div>
+        <div style="margin-top:6px;color:#6b7280;font-size:13px;">授权管理页示意图</div>
+        <div class="nav">
+          <div>总览</div>
+          <div>媒体库</div>
+          <div>自动化任务</div>
+          <div>自动化设置</div>
+          <div class="active">授权管理</div>
+        </div>
+      </aside>
+      <main>
+        <div class="header">
+          <div>
+            <h1>授权管理</h1>
+            <div class="sub">先确认实例绑定参数，再粘贴 license 并点击“保存并校验授权”。</div>
+          </div>
+          <div class="tag">示意图，仅用于手册说明</div>
+        </div>
+        <div class="layout">
+          <div class="card">
+            <div class="two">
+              <div>
+                <div class="label">实例 IP</div>
+                <div class="input">203.0.113.10</div>
+              </div>
+              <div>
+                <div class="label">实例标识</div>
+                <div class="input">https://demo.example.com</div>
+              </div>
+            </div>
+            <div class="label">离线 license</div>
+            <div class="textarea">MUSIC-AUTOTAG2NFO-LICENSE
+PACKAGE=enhanced
+INSTANCE_IP=203.0.113.10
+INSTANCE_MARK=https://demo.example.com
+EXPIRES_AT=2027-12-31
+SIGNATURE=...</div>
+            <div class="actions">
+              <button class="btn primary">保存并校验授权</button>
+              <button class="btn secondary">清空</button>
+            </div>
+          </div>
+          <div class="state">
+            <div class="card ok">
+              <strong>授权状态：已生效</strong><br>
+              当前套餐：增强版<br>
+              已开放能力数量：5
+            </div>
+            <div class="card warn">
+              如果这里没有生效，先检查三件事：<br>
+              1. 实例 IP 是否和 license 一致。<br>
+              2. 实例标识是否和 license 一致。<br>
+              3. 当前镜像版本是否已经包含最新授权逻辑。
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

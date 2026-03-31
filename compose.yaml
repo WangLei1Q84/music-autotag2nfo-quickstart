@@ -1,0 +1,29 @@
+services:
+  app:
+    # 首次体验可以先用 latest，正式环境建议改成明确版本号。
+    image: stuart1q84/music-autotag2nfo:latest
+    restart: unless-stopped
+    ports:
+      # 左侧是宿主机端口，默认访问 http://127.0.0.1:8000/app
+      - "8000:8000"
+    environment:
+      STRM_ENVIRONMENT: production
+      STRM_DEBUG: "false"
+      STRM_DATABASE_URL: sqlite:////data/app.db
+      STRM_DATA_DIR: /data
+      STRM_OUTPUT_ROOT: /data/output
+      STRM_LICENSE_INSTANCE_IP: ""
+      STRM_LICENSE_INSTANCE_MARK: ""
+      PORT: 8000
+    volumes:
+      - ./data:/data
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/healthz', timeout=3).read()
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s

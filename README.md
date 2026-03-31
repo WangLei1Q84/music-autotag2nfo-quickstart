@@ -12,6 +12,15 @@
 - 查看任务状态
 - 找出哪些结果值得人工再看一眼
 
+## 演示视频
+
+下面这段演示展示的是一个最短使用路径：
+总览 -> 数据源 -> 新建数据源 -> 自动化设置 / 授权管理
+
+![演示视频](./manual/screenshots/demo-flow.gif)
+
+主项目源码仓库：
+- <https://github.com/WangLei1Q84/music-autotag2nfo>
 
 ## 为什么会需要它
 
@@ -166,9 +175,9 @@ docker compose down
 - `compose.yaml`
   - 唯一默认部署入口
 - `manual/user-guide.md`
-  - 面向最终使用者的操作手册，包含真实截图
+  - 面向最终使用者的操作手册，包含真实截图和演示 GIF
 - `manual/screenshots/`
-  - 手册配图
+  - 手册配图和演示素材
 - `quickstart/free.md`
   - 首次启动说明
 - `quickstart/enhanced.md`

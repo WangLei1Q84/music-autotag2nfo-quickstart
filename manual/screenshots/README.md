@@ -1,10 +1,11 @@
 # 截图目录
 
-这份目录用于存放用户手册配图。
+这份目录用于存放用户手册配图和演示素材。
 
 当前图片来自 `stuart1q84/music-autotag2nfo:latest` 的实际运行界面。
 
-当前目录中的页面包括：
+当前目录中的素材包括：
+- `demo-flow.gif`
 - `app-home.png`
 - `sources-page.png`
 - `source-create-drawer.png`
